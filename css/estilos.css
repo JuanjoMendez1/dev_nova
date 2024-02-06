@@ -197,11 +197,13 @@ a {
 
 .navegacion {
     display: none;
+    margin-right: 0;
 }
 
 @media (min-width: 768px) {
     .navegacion {
         display: block;
+        margin-right: 2rem;
     }
 }
 
