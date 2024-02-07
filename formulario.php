@@ -9,9 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $asunto = "Solicitud de Información Nova Devs";
     $asunto_cliente = "Gracias por enviar su información";
 
-    $nombre = mb_encode_mimeheader($nombre, "UTF-8", "Q");
-    $mensaje = mb_encode_mimeheader($mensaje, "UTF-8", "Q");
-
     // Construcción del comentario
     $comentario = "
     Nombre del cliente: $nombre
@@ -32,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'X-Mailer: PHP/' . phpversion();
 
     $asunto = mb_encode_mimeheader($asunto, "UTF-8", "Q");
+    $comentario = mb_encode_mimeheader($comentario, "UTF-8", "Q");
     // Intento de envío del correo
     if (mail($email_to, $asunto, $comentario, $headers)) {
         echo "Correo enviado";
