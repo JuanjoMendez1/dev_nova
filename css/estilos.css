@@ -196,9 +196,11 @@ a {
 
 @media (min-width: 768px) {
     .navegacion {
-        display: block;
-        margin-right: 2rem;
-    }
+            visibility: visible;
+            height: 100%;
+            opacity: 1;
+            margin-right: 2rem;
+        }
 }
 
 .hero {
@@ -459,10 +461,6 @@ a {
     cursor: pointer;
 }
 
-/* .contenidoContacto .imgContacto img{
-    width: 50%;
-} */
-
 @media (min-width: 768px) {
     .contenidoContacto {
         flex-direction: row;
@@ -522,8 +520,6 @@ footer {
     justify-content: center;
     flex-direction: column;
 }
-
-
 
 @media (max-width: 768px) {
     .grid-footer {
