@@ -14,7 +14,7 @@ const btn_formulario = document.querySelector("#btn_formulario");
 
 const ocultar_menu = () => {
     var anchoDePantalla = window.innerWidth;
-    if(anchoDePantalla < 768){
+    if (anchoDePantalla < 768) {
         if (navegacion.classList.contains("mostrar")) {
             navegacion.classList.add("ocultar");
             navegacion.classList.remove("mostrar");
@@ -23,6 +23,61 @@ const ocultar_menu = () => {
             navegacion.classList.remove("ocultar");
         }
     }
+}
+
+const inicio = () => {
+    ocultar_menu();
+    var inicio = document.querySelector("#inicio");
+    const posicionTop = inicio.offsetTop - 55;
+    // Realizar el desplazamiento con suavidad
+    window.scrollTo({
+        top: posicionTop,
+        behavior: 'smooth'
+    });
+}
+
+const nosotros = () => {
+    ocultar_menu();
+    var nosotros = document.querySelector("#nosotros");
+    const posicionTop = nosotros.offsetTop - 55;
+    // Realizar el desplazamiento con suavidad
+    window.scrollTo({
+        top: posicionTop,
+        behavior: 'smooth'
+    });
+}
+
+const servicios = () => {
+    ocultar_menu();
+    var servicios = document.querySelector("#servicios");
+    const posicionTop = servicios.offsetTop - 55;
+    // Realizar el desplazamiento con suavidad
+    window.scrollTo({
+        top: posicionTop,
+        behavior: 'smooth'
+    });
+}
+
+const nuestro_trabajo = () => {
+    ocultar_menu();
+    var nuestro_trabajo = document.querySelector("#nuestro_trabajo");
+    const posicionTop = nuestro_trabajo.offsetTop - 55;
+    // Realizar el desplazamiento con suavidad
+    window.scrollTo({
+        top: posicionTop,
+        behavior: 'smooth'
+    });
+}
+
+const contacto = () => {
+    ocultar_menu();
+    var contacto = document.querySelector("#contacto");
+    const posicionTop = contacto.offsetTop - 55;
+    // Realizar el desplazamiento con suavidad
+    window.scrollTo({
+        top: posicionTop,
+        behavior: 'smooth'
+    });
 }
 
 function obtenerAnchoDePantalla() {
@@ -35,7 +90,7 @@ function obtenerAnchoDePantalla() {
     }
 }
 
-const enviar_email = async(e)=> {
+const enviar_email = async (e) => {
     try {
         e.preventDefault();
         const data = new FormData();
@@ -48,7 +103,7 @@ const enviar_email = async(e)=> {
             body: data
         });
         const resultado = await response.text();
-        if(resultado == "Correo enviado"){
+        if (resultado == "Correo enviado") {
             alert("¡Gracias por elegir Dev Nova para tu proyecto! Hemos recibido tu formulario y nos pondremos en contacto contigo pronto para explorar juntos las emocionantes posibilidades que tu idea presenta. ¡Estamos ansiosos por comenzar esta colaboración!")
             window.location.reload();
         }
@@ -62,10 +117,10 @@ window.addEventListener('resize', function () {
 });
 btn_menu.addEventListener("click", ocultar_menu);
 
-btn_inicio.addEventListener("click", ocultar_menu);
-btn_nosotros.addEventListener("click", ocultar_menu);
-btn_servicios.addEventListener("click", ocultar_menu);
-btn_nuestro_trabajo.addEventListener("click", ocultar_menu);
-btn_contacto.addEventListener("click", ocultar_menu);
+btn_inicio.addEventListener("click", inicio);
+btn_nosotros.addEventListener("click", nosotros);
+btn_servicios.addEventListener("click", servicios);
+btn_nuestro_trabajo.addEventListener("click", nuestro_trabajo);
+btn_contacto.addEventListener("click", contacto);
 
 btn_formulario.addEventListener("click", enviar_email);
