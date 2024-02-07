@@ -28,7 +28,7 @@ const ocultar_menu = () => {
 const inicio = () => {
     ocultar_menu();
     var inicio = document.querySelector("#inicio");
-    const posicionTop = inicio.offsetTop - 55;
+    const posicionTop = inicio.offsetTop - 50;
     // Realizar el desplazamiento con suavidad
     window.scrollTo({
         top: posicionTop,
@@ -39,7 +39,7 @@ const inicio = () => {
 const nosotros = () => {
     ocultar_menu();
     var nosotros = document.querySelector("#nosotros");
-    const posicionTop = nosotros.offsetTop - 55;
+    const posicionTop = nosotros.offsetTop - 50;
     // Realizar el desplazamiento con suavidad
     window.scrollTo({
         top: posicionTop,
@@ -50,7 +50,7 @@ const nosotros = () => {
 const servicios = () => {
     ocultar_menu();
     var servicios = document.querySelector("#servicios");
-    const posicionTop = servicios.offsetTop - 55;
+    const posicionTop = servicios.offsetTop - 50;
     // Realizar el desplazamiento con suavidad
     window.scrollTo({
         top: posicionTop,
@@ -61,7 +61,7 @@ const servicios = () => {
 const nuestro_trabajo = () => {
     ocultar_menu();
     var nuestro_trabajo = document.querySelector("#nuestro_trabajo");
-    const posicionTop = nuestro_trabajo.offsetTop - 55;
+    const posicionTop = nuestro_trabajo.offsetTop - 50;
     // Realizar el desplazamiento con suavidad
     window.scrollTo({
         top: posicionTop,
@@ -72,7 +72,7 @@ const nuestro_trabajo = () => {
 const contacto = () => {
     ocultar_menu();
     var contacto = document.querySelector("#contacto");
-    const posicionTop = contacto.offsetTop - 55;
+    const posicionTop = contacto.offsetTop - 50;
     // Realizar el desplazamiento con suavidad
     window.scrollTo({
         top: posicionTop,
