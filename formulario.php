@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'X-Mailer: PHP/' . phpversion();
 
     $asunto = mb_encode_mimeheader($asunto, "UTF-8", "Q");
-    $comentario = mb_encode_mimeheader($comentario, "UTF-8", "Q");
+    $comentario = utf8_encode($comentario);
     // Intento de envío del correo
     if (mail($email_to, $asunto, $comentario, $headers)) {
         echo "Correo enviado";
