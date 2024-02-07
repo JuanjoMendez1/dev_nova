@@ -49,6 +49,22 @@ const enviar_email = async(e)=> {
         });
         const resultado = await response.text();
         console.log(resultado);
+        // const asunto = encodeURIComponent("Nuevo mensaje desde el formulario");
+        // const cuerpo = encodeURIComponent(`Nombre: ${nombre.value}\nCorreo: ${correo.value}\nMensaje: ${mensaje.value}`);
+        // const enlaceCorreo = `mailto:juanjomendez029@gmail.com?subject=${asunto}&body=${cuerpo}`;
+
+        //     window.location.href = enlaceCorreo;
+        // Email.send({
+        //     Host : "smtp.elasticemail.com",
+        //     Username : "username",
+        //     Password : "password",
+        //     To : 'them@website.com',
+        //     From : "you@isp.com",
+        //     Subject : "This is the subject",
+        //     Body : "And this is the body"
+        // }).then(
+        //   message => alert(message)
+        // );
     } catch (error) {
         console.log(error);
     }
@@ -65,4 +81,4 @@ btn_servicios.addEventListener("click", ocultar_menu);
 btn_nuestro_trabajo.addEventListener("click", ocultar_menu);
 btn_contacto.addEventListener("click", ocultar_menu);
 
-// btn_formulario.addEventListener("click", enviar_email);
+btn_formulario.addEventListener("click", enviar_email);
