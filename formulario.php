@@ -5,12 +5,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $mensaje = $_POST['mensaje'];
 
-    $email_to = "juanmendez@maplins.com.mx";
+    $email_to = "juanjomendez029@gmail.com";
     $asunto = "Solicitud de Información Nova Devs";
     $asunto_cliente = "Gracias por enviar su información";
 
     // Construcción del comentario
-    $comentario = "Nombre del cliente: $nombre\nEmail del cliente: $email\nTeléfono del cliente: $telefono\nMensaje o comentario: $mensaje";
+    $comentario = "
+    Nombre del cliente: $nombre
+    Email del cliente: $email
+    Teléfono del cliente: $telefono
+    Mensaje o comentario: $mensaje
+    ";
 
     // Validación y limpieza de datos para evitar inyección de encabezados
     $email_to = filter_var($email_to, FILTER_SANITIZE_EMAIL);
