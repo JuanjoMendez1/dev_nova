@@ -1,4 +1,3 @@
-
 const navegacion = document.querySelector("#navegacion");
 const btn_menu = document.querySelector("#btn_menu");
 const btn_inicio = document.querySelector("#btn_inicio");
@@ -6,6 +5,12 @@ const btn_nosotros = document.querySelector("#btn_nosotros");
 const btn_servicios = document.querySelector("#btn_servicios");
 const btn_nuestro_trabajo = document.querySelector("#btn_nuestro_trabajo");
 const btn_contacto = document.querySelector("#btn_contacto");
+
+const nombre = document.querySelector("#nombre");
+const telefono = document.querySelector("#telefono");
+const correo = document.querySelector("#correo");
+const mensaje = document.querySelector("#mensaje");
+const btn_formulario = document.querySelector("#btn_formulario");
 
 const ocultar_menu = () => {
     var anchoDePantalla = window.innerWidth;
@@ -30,6 +35,25 @@ function obtenerAnchoDePantalla() {
     }
 }
 
+const enviar_email = async(e)=> {
+    try {
+        e.preventDefault();
+        const data = new FormData();
+        data.append("nombre", nombre.value);
+        data.append("telefono", telefono.value);
+        data.append("email", correo.value);
+        data.append("mensaje", mensaje.value);
+        const response = await fetch(`/formulario.php`, {
+            method: 'POST',
+            body: data
+        });
+        const resultado = await response.text();
+        console.log(resultado);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 window.addEventListener('resize', function () {
     obtenerAnchoDePantalla();
 });
@@ -41,4 +65,4 @@ btn_servicios.addEventListener("click", ocultar_menu);
 btn_nuestro_trabajo.addEventListener("click", ocultar_menu);
 btn_contacto.addEventListener("click", ocultar_menu);
 
-console.log("Entro al js");
+// btn_formulario.addEventListener("click", enviar_email);
