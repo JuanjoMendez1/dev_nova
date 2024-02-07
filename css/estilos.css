@@ -120,6 +120,7 @@ a {
     width: 100%;
     margin: 0!important;
     padding: 1rem 2rem;
+    z-index: 1000;
     /* } */
 }
 /* .barra {
@@ -411,6 +412,7 @@ a {
 
 .contenidoContacto form{
     width: 100%;
+    padding: 2rem;
 }
 
 .contenidoContacto .inputForm{
@@ -424,7 +426,7 @@ a {
     border-radius: 8px;
     border: none;
     outline: none;
-    width: 100%;
+    width: calc(100% - 2rem);
     padding-left: 2rem;
 }
 
@@ -433,8 +435,12 @@ a {
     border-radius: 8px;
     border: none;
     outline: none;
-    width: 100%;
+    width: calc(100% - 2rem);
     padding-left: 2rem;
+}
+
+.imgContacto{
+    padding: 2rem;
 }
 
 .btns_contacto{
@@ -530,4 +536,27 @@ footer {
       .imgFooter {
         max-width: 50%;
       }
+  }
+
+  @keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+  }
+
+  .sectionNosotros, .sectionServicios, .sectionProyectos, .sectionContacto {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
   }
