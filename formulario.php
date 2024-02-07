@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $mensaje = $_POST['mensaje'];
 
-    $email_to = "juanjomendez029@gmail.com";
+    $email_to = "juanmendez@maplins.com.mx";
     $asunto = "Solicitud de Información Nova Devs";
     $asunto_cliente = "Gracias por enviar su información";
 
@@ -30,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Intento de envío del correo
     if (mail($email_to, $asunto, $comentario, $headers)) {
-        echo "Correo enviado con éxito";
+        echo "Correo enviado";
     } else {
-        echo "Error al enviar el correo";
+        echo "Error";
     }
 }
 ?>

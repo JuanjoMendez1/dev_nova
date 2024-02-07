@@ -49,6 +49,11 @@ const enviar_email = async(e)=> {
         });
         const resultado = await response.text();
         console.log(resultado);
+        if(resultado == "Correo enviado"){
+            console.log("Si se envio, ya se puede recargar la pagina");
+        } else {
+            console.log("no se puede recargar la pagina");
+        }
         // const asunto = encodeURIComponent("Nuevo mensaje desde el formulario");
         // const cuerpo = encodeURIComponent(`Nombre: ${nombre.value}\nCorreo: ${correo.value}\nMensaje: ${mensaje.value}`);
         // const enlaceCorreo = `mailto:juanjomendez029@gmail.com?subject=${asunto}&body=${cuerpo}`;
