@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['correo'];
     $mensaje = $_POST['mensaje'];
 
-    $email_to = "juanjomendez029@gmail.com";
+    $email_to = "juanmendez@maplins.com.mx";
     $asunto = "Solicitud de Información Nova Devs";
     $asunto_cliente = "Gracias por enviar su información";
 
