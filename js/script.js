@@ -51,6 +51,7 @@ const enviar_email = async(e)=> {
         console.log(resultado);
         if(resultado == "Correo enviado"){
             console.log("Si se envio, ya se puede recargar la pagina");
+            window.location.reload();
         } else {
             console.log("no se puede recargar la pagina");
         }
