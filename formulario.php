@@ -23,13 +23,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $asunto_cliente = filter_var($asunto_cliente, FILTER_SANITIZE_STRING);
     $comentario = wordwrap($comentario, 70, "\r\n");
 
-    // Construcción de los encabezados
+    $asunto = mb_encode_mimeheader($asunto, "UTF-8", "Q");
+    $comentario = mb_convert_encoding($comentario, "UTF-8", "auto");
+
+    // Construcción de los encabezados con Content-Type y charset
     $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email_to . "\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+        'X-Mailer: PHP/' . phpversion() . "\r\n" .
+        'Content-Type: text/plain; charset=UTF-8';
 
-    $asunto = mb_encode_mimeheader($asunto, "UTF-8", "Q");
-    $comentario = utf8_encode($comentario);
     // Intento de envío del correo
     if (mail($email_to, $asunto, $comentario, $headers)) {
         echo "Correo enviado";
