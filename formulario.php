@@ -2,7 +2,7 @@
 // var_dump("Entropy");
 $nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
-$email = $_POST['email'];
+$email = $_POST['correo'];
 $mensaje = $_POST['mensaje']; 
 
     $email_to = "juanjomendez029@gmail.com";
