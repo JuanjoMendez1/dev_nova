@@ -2,7 +2,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
     $telefono = $_POST['telefono'];
-    $email = $_POST['correo'];
+    $email = $_POST['email'];
     $mensaje = $_POST['mensaje'];
 
     $email_to = "juanmendez@maplins.com.mx";
