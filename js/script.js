@@ -48,29 +48,10 @@ const enviar_email = async(e)=> {
             body: data
         });
         const resultado = await response.text();
-        console.log(resultado);
         if(resultado == "Correo enviado"){
-            console.log("Si se envio, ya se puede recargar la pagina");
+            alert("¡Gracias por elegir Dev Nova para tu proyecto! Hemos recibido tu formulario y nos pondremos en contacto contigo pronto para explorar juntos las emocionantes posibilidades que tu idea presenta. ¡Estamos ansiosos por comenzar esta colaboración!")
             window.location.reload();
-        } else {
-            console.log("no se puede recargar la pagina");
         }
-        // const asunto = encodeURIComponent("Nuevo mensaje desde el formulario");
-        // const cuerpo = encodeURIComponent(`Nombre: ${nombre.value}\nCorreo: ${correo.value}\nMensaje: ${mensaje.value}`);
-        // const enlaceCorreo = `mailto:juanjomendez029@gmail.com?subject=${asunto}&body=${cuerpo}`;
-
-        //     window.location.href = enlaceCorreo;
-        // Email.send({
-        //     Host : "smtp.elasticemail.com",
-        //     Username : "username",
-        //     Password : "password",
-        //     To : 'them@website.com',
-        //     From : "you@isp.com",
-        //     Subject : "This is the subject",
-        //     Body : "And this is the body"
-        // }).then(
-        //   message => alert(message)
-        // );
     } catch (error) {
         console.log(error);
     }
