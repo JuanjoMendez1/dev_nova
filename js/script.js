@@ -112,6 +112,16 @@ const enviar_email = async (e) => {
     }
 }
 
+var splide = new Splide( '.splide', {
+    type    : 'loop',
+    perPage : 5,
+    autoplay: true,
+  } );
+  
+  splide.mount();
+
+
+
 window.addEventListener('resize', function () {
     obtenerAnchoDePantalla();
 });

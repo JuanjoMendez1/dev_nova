@@ -47,6 +47,15 @@ a {
     color: #000000;
 }
 
+.splide__arrows, .splide__pagination{
+    display: none!important;
+}
+
+.splide__slide img {
+    max-width: 50%;
+    height: auto;;
+}
+
 /* Utilidades */
 
 .seccion {
@@ -545,10 +554,7 @@ footer {
     }
 }
 
-.sectionNosotros,
-.sectionServicios,
-.sectionProyectos,
-.sectionContacto {
+.informacionAnimacion {
     view-timeline-name: --image;
     view-timeline-axis: block;
 

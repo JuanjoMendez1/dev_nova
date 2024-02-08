@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="/img/faviconLogo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/875cefde4d.js" crossorigin="anonymous"></script>
     <title>Dev Nova</title>
 </head>
@@ -54,7 +56,7 @@
     <main>
         <section id="nosotros" class="sectionNosotros">
             <div class="padd contenedor">
-                <div class="informacionNosotros">
+                <div class="informacionNosotros informacionAnimacion">
                     <h3>Nosotros</h3>
                     <p>Bienvenido a Dev Nova, donde la innovación se encuentra con la excelencia en el desarrollo de
                         software. En el corazón de nuestra empresa se encuentra un equipo apasionado de expertos en
@@ -64,7 +66,7 @@
                         estamos listos para llevar tus proyectos al siguiente nivel en el emocionante mundo digital.
                     </p>
                 </div>
-                <div class="sectionInformacion">
+                <div class="sectionInformacion informacionAnimacion">
                     <div class="informacionMision">
                         <h4>Misión</h4>
                         <p>Forjar un futuro digital donde la creatividad y la funcionalidad se fusionen, estableciendo
@@ -81,7 +83,7 @@
 
         <section id="servicios" class="sectionServicios">
             <div class="padd contenedor">
-                <div class="informacionServicios">
+                <div class="informacionServicios informacionAnimacion">
                     <h3>Servicios</h3>
                     <p>En Dev Nova, ofrecemos una gama completa de servicios de desarrollo tecnológico diseñados para
                         transformar tus ideas en soluciones digitales excepcionales. Desde el desarrollo web que impulsa
@@ -97,7 +99,7 @@
                         hoy.
                     </p>
                 </div>
-                <div class="servicios">
+                <div class="servicios informacionAnimacion">
                     <div class="cardServicios">
                         <img src="/img/sitio-web.png" alt="Desarrollo Web">
                         <h5>Desarrollo Web</h5>
@@ -121,12 +123,46 @@
                             estratégicas.</p>
                     </div>
                 </div>
+                <div class="sectionHerramientas informacionAnimacion">
+                    <div class="tecnologias">
+                        <section class="splide" aria-labelledby="carousel-heading">
+                            <h3 id="carousel-heading">Herramientas</h3>
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="/img/tecnologias/figma.png" alt="Logo Figma"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/html.png" alt="Logo HTML"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/css.png" alt="Logo CSS"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/js.png" alt="Logo JS"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/jquery.png" alt="Logo JQuery"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/sass.png" alt="Logo SASS"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/react.png" alt="Logo React"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/nest.png" alt="Logo NextJs"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/typescript.png" alt="Logo TypeScript"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/node.png" alt="Logo NodeJS"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/npm.png" alt="Logo npm"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/python.png" alt="Logo Python"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/php.png" alt="Logo PHP"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/mongo.png" alt="Logo MongoDB"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/mysql.png" alt="Logo MySQL"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/firebase.png" alt="Logo Firebase"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/github.png" alt="Logo GitHub"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/git.png" alt="Logo Git"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/bitbucket.png" alt="Logo Bitbucket"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/swift.png" alt="Logo Swift"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/wordpress.png" alt="Logo WordPress"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/ionic.png" alt="Logo Ionic"></li>
+                                    <li class="splide__slide"><img src="/img/tecnologias/analytics.png" alt="Logo Analytics"></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="nuestro_trabajo" class="sectionProyectos">
             <div class="padd contenedor">
-                <div class="informacionNuestroTrabajo">
+                <div class="informacionNuestroTrabajo informacionAnimacion">
                     <h3>Nuestros Proyectos</h3>
                     <p>En Dev Nova, estamos preparados para asumir cualquier desafío y convertir cada visión en una
                         realidad digital impactante. Ponemos a tu disposición nuestro compromiso, experiencia y
@@ -134,7 +170,7 @@
                     <p>Confía en nosotros para no solo cumplir con tus expectativas, sino también para superarlas.
                         Estamos listos para ser tu socio de confianza en el emocionante viaje de desarrollo digital.</p>
                 </div>
-                <div class="proyectos">
+                <div class="proyectos informacionAnimacion">
                     <div class="proyecto">
                         <img src="/img/maplins.png" alt="Imagen de Maplins">
                         <p>Landing Page o Página de Aterrizaje de la empresa Maplins. Destaca brevemente la información
@@ -162,14 +198,14 @@
 
         <section id="contacto" class="sectionContacto">
             <div class="padd contenedor">
-                <div class="informacionContacto">
+                <div class="informacionContacto informacionAnimacion">
                     <h3>Contáctanos</h3>
                     <h4>Cuéntanos más de tu idea.</h4>
                     <p>¡Estamos emocionados por conocer más sobre tu idea! Comparte tus detalles con nosotros y
                         cuéntanos un poco más al respecto. Nos comprometemos a ponernos en contacto contigo lo antes
                         posible para explorar cómo podemos convertir tu visión en una realidad digital impactante.</p>
                 </div>
-                <div class="contenidoContacto">
+                <div class="contenidoContacto informacionAnimacion">
                     <form action="#">
                         <div class="inputForm">
                             <label for="nombre">Nombre</label>
