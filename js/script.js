@@ -32,7 +32,8 @@ const inicio = () => {
     // Realizar el desplazamiento con suavidad
     window.scrollTo({
         top: posicionTop,
-        behavior: 'smooth'
+        behavior: 'smooth',
+        duration: 5000
     });
 }
 
