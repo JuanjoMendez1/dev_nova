@@ -33,18 +33,22 @@ h2 {
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 3.8rem;
     color: #3FA9F5;
 }
 
 h4 {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     color: #3FA9F5;
 }
 
 a {
     text-decoration: none;
     color: #000000;
+}
+
+p {
+    font-size: 2rem;
 }
 
 .splide__arrows, .splide__pagination{
@@ -221,10 +225,12 @@ a {
 }
 
 .hero {
-    height: 70vh;
+    min-height: 70vh;
     background-color: #F3F6F8;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    padding: 1rem;
     align-items: center;
 }
 
@@ -235,7 +241,7 @@ a {
 
 @media (min-width: 768px) {
     .hero {
-        flex-direction: row;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .imagen_hero img {
@@ -246,11 +252,17 @@ a {
 .informacion .info {
     font-weight: bold;
     color: #3FA9F5;
+    font-size: 2.6rem;
 }
 
 .informacion .info_title {
     font-weight: bold;
     line-height: 1;
+    font-size: 4.2rem;
+}
+
+.informacion .info_description {
+    font-size: 2rem;
 }
 
 /* Seccion Nosotros */
@@ -524,6 +536,7 @@ footer {
 
 .social-social p {
     margin: 0;
+    font-size: 1.4rem!important;
 }
 
 .social {
@@ -536,6 +549,10 @@ footer {
     width: 100%;
     justify-content: center;
     flex-direction: column;
+}
+
+.copyright {
+    font-size: 1.8rem;
 }
 
 @media (max-width: 768px) {
