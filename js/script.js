@@ -112,16 +112,14 @@ const enviar_email = async (e) => {
     }
 }
 
-var splide = new Splide( '.splide', {
-    type    : 'loop',
-    perPage : 5,
+var splide = new Splide('.splide', {
+    type: 'loop',
+    perPage: 5,
     autoplay: true,
     interval: 3000
-  } );
-  
-  splide.mount();
+});
 
-
+splide.mount();
 
 window.addEventListener('resize', function () {
     obtenerAnchoDePantalla();

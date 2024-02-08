@@ -51,8 +51,9 @@ p {
     font-size: 2rem;
 }
 
-.splide__arrows, .splide__pagination{
-    display: none!important;
+.splide__arrows,
+.splide__pagination {
+    display: none !important;
 }
 
 /* Utilidades */
@@ -76,13 +77,15 @@ p {
 
 .splide__slide img {
     max-width: 75%;
-    height: auto;;
+    height: auto;
+    ;
 }
 
 @media (min-width: 768px) {
     .splide__slide img {
         max-width: 50%;
-        height: auto;;
+        height: auto;
+        ;
     }
 }
 
@@ -90,7 +93,13 @@ p {
 
 .site-header {
     background-color: #F3F6F8;
-    margin-top: 6rem;
+    margin-top: 12rem;
+}
+
+@media (min-width: 768px) {
+    .site-header {
+        margin-top: 6rem;
+    }
 }
 
 .menu {
@@ -217,11 +226,11 @@ p {
 
 @media (min-width: 768px) {
     .navegacion {
-            visibility: visible;
-            height: 100%;
-            opacity: 1;
-            margin-right: 2rem;
-        }
+        visibility: visible;
+        height: 100%;
+        opacity: 1;
+        margin-right: 2rem;
+    }
 }
 
 .hero {
@@ -536,7 +545,7 @@ footer {
 
 .social-social p {
     margin: 0;
-    font-size: 1.4rem!important;
+    font-size: 1.4rem !important;
 }
 
 .social {
