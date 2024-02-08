@@ -449,7 +449,13 @@ p {
 
 .contenidoContacto form {
     width: 100%;
-    padding: 2rem;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .contenidoContacto form {
+        padding: 2rem;
+    }
 }
 
 .contenidoContacto .inputForm {
