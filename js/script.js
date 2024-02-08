@@ -114,8 +114,9 @@ const enviar_email = async (e) => {
 
 var splide = new Splide( '.splide', {
     type    : 'loop',
-    perPage : 3,
+    perPage : 5,
     autoplay: true,
+    interval: 3000
   } );
   
   splide.mount();
