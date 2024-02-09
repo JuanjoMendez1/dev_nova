@@ -382,6 +382,7 @@ p {
 
 .informacionNuestroTrabajo p {
     width: 100%;
+    margin: 0;
 }
 
 .proyectos {
