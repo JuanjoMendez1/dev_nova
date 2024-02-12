@@ -94,6 +94,10 @@ function obtenerAnchoDePantalla() {
 const enviar_email = async (e) => {
     try {
         e.preventDefault();
+        if(nombre.value == "" || telefono.value == "" || mensaje.value == "") {
+            alert("Por favor, completa todos los campos del formulario para que podamos ponernos en contacto contigo posteriormente. Tu información es crucial para brindarte el mejor servicio posible.");
+            return;
+        }
         const data = new FormData();
         data.append("nombre", nombre.value);
         data.append("telefono", telefono.value);
@@ -104,6 +108,7 @@ const enviar_email = async (e) => {
             body: data
         });
         const resultado = await response.text();
+        console.log(resultado);
         if (resultado == "Correo enviado") {
             alert("¡Gracias por elegir Dev Nova para tu proyecto! Hemos recibido tu formulario y nos pondremos en contacto contigo pronto para explorar juntos las emocionantes posibilidades que tu idea presenta. ¡Estamos ansiosos por comenzar esta colaboración!")
             window.location.reload();
